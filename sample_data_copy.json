@@ -1,0 +1,218 @@
+{
+  "report_title": "Invest4Edu Investment Report",
+  "logo_url": "",
+  "investment_products": {
+    "target": "1.00Cr",
+    "mutual_fund": {
+      "points": [
+        "Focus on creating a Mutual fund portfolio with objective of long term wealth creation.",
+        "Selection of fund which are majorly equity oriented and capable of generating Alpha in comparison with the benchmark returns.",
+        "Investment in funds with a time horizon of 5 - 7years.",
+        "Selection of portfolio which are managed by Fund Managers with proven track record."
+      ],
+      "top_funds": [
+        {
+          "name": "HDFC Top 100 Fund",
+          "category": "LargeCap",
+          "returns": {
+            "one_year": 8.00,
+            "three_years": 8.00,
+            "five_years": 8.00
+          }
+        },
+        {
+          "name": "Nippon India Large cap Fund",
+          "category": "LargeCap",
+          "returns": {
+            "one_year": 8.00,
+            "three_years": 8.00,
+            "five_years": 8.00
+          }
+        },
+        {
+          "name": "ICICI Bluechip Fund",
+          "category": "Large Cap",
+          "returns": {
+            "one_year": 18.00,
+            "three_years": 18.00,
+            "five_years": 18.00
+          }
+        },
+        {
+          "name": "Bajaj Finserv large Cap Fund",
+          "category": "Large Cap",
+          "returns": {
+            "one_year": 8.00,
+            "three_years": 8.00,
+            "five_years": 8.00
+          }
+        },
+        {
+          "name": "Motilal Oswal Nasdaq 100 Fund of Fund",
+          "category": "Global Fund",
+          "returns": {
+            "one_year": 8.00,
+            "three_years": 8.00,
+            "five_years": 8.00
+          }
+        },
+        {
+          "name": "ICICI Prudential US Bluechip Equity Fund",
+          "category": "Global Fund",
+          "returns": {
+            "one_year": 18.00,
+            "three_years": 18.00,
+            "five_years": 18.00
+          }
+        },
+        {
+          "name": "Axis Long Term Equity Fund",
+          "category": "LargeCap",
+          "returns": {
+            "one_year": 12.00,
+            "three_years": 12.00,
+            "five_years": 12.00
+          }
+        },
+        {
+          "name": "Tata Hybrid Equity Fund",
+          "category": "Hybrid",
+          "returns": {
+            "one_year": 10.00,
+            "three_years": 10.00,
+            "five_years": 10.00
+          }
+        },
+        {
+          "name": "DSP BlackRock Top 100 Equity Fund",
+          "category": "LargeCap",
+          "returns": {
+            "one_year": 14.00,
+            "three_years": 14.00,
+            "five_years": 14.00
+          }
+        },
+        {
+          "name": "Franklin India Prima Fund",
+          "category": "LargeCap",
+          "returns": {
+            "one_year": 16.00,
+            "three_years": 16.00,
+            "five_years": 16.00
+          }
+        },
+        {
+          "name": "HDFC Balanced Fund",
+          "category": "Balanced",
+          "returns": {
+            "one_year": 12.00,
+            "three_years": 12.00,
+            "five_years": 12.00
+          }
+        },
+        {
+          "name": "ICICI Prudential Long Term Equity Fund",
+          "category": "LargeCap",
+          "returns": {
+            "one_year": 10.00,
+            "three_years": 10.00,
+            "five_years": 10.00
+          }
+        },
+        {
+          "name": "SBI Magnum Multiplier Fund",
+          "category": "LargeCap",
+          "returns": {
+            "one_year": 12.00,
+            "three_years": 12.00,
+            "five_years": 12.00
+          }
+        },
+        {
+          "name": "Canara Robeco Equity Tax Saver Fund",
+          "category": "ELSS",
+          "returns": {
+            "one_year": 10.00,
+            "three_years": 10.00,
+            "five_years": 10.00
+          }
+        }
+      ]
+    }
+  },
+  "asset_allocation": {
+    "description": "Asset Allocation is a mix of different asset class eg equity, Debt, Gold etc in an investment portfolio. The aim of asset allocation is to balance risk and return in accordance with different financial goals and risk appetite of the client.",
+    "benefits": [
+      "Reduce Investment Risk",
+      "Optimises Returns",
+      "Liquidity Management",
+      "Achievement of Financial Goal",
+      "Aids in Tax Planning"
+    ],
+    "distribution": {
+      "equity": 70,
+      "debt": 30
+    },
+    "items": [
+      {
+        "name": "Mutual Funds",
+        "details": [
+          "Large Cap Fund - 25 Lacs.",
+          "Global Funds - 25 Lacs.",
+          "Hybrid Fund/Multi Asset Fund - 25 Lacs.",
+          "Thematic Fund - 25 Lacs."
+        ],
+        "asset_class": "Equity",
+        "amount": "1.00 Cr."
+      },
+      {
+        "name": "Portfolio Management Service",
+        "asset_class": "Equity",
+        "amount": "0.50 Cr."
+      },
+      {
+        "name": "Private Equity",
+        "asset_class": "Equity",
+        "amount": "0.50 Cr."
+      },
+      {
+        "name": "Debt",
+        "asset_class": "Debt",
+        "amount": "0.50 Cr."
+      }
+    ],
+    "total": "2.50 Cr."
+  }
+,
+  "fixed_income_offering": {
+    "target": "1.00Cr",
+    "description": "The investment strategy is to invest across high quality Fixed Income Instruments along with structured diversified portfolio with an aim to generate periodic cash flows and capital growth.",
+    "bullets": [
+      "Focus on high credit quality instruments with majority allocation to issuers with high degree of corporate governance",
+      "Investment strategy is to achieve diversification, targeting periodic cash flows, balancing risk and higher portfolio performance",
+      "High quality income portfolio with dynamic investment duration to take care of market volatility"
+    ],
+    "debt_papers": [
+      {"fund_name": "10.5% SATIN CREDITCARE NETWORK LIMITED 2027", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"},
+      {"fund_name": "11.1% ESAF SMALL FINANCE BANK LIMITED 2034", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"},
+      {"fund_name": "8.40% HDB FINANCIAL SERVICES LIMITED 2033", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"},
+      {"fund_name": "8.50% CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED 2034", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"},
+      {"fund_name": "9.49% KERALA INFRASTRUCTURE INVESTMENT FUND BOARD 2034", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"}
+    ]
+  },
+  
+  "private_equity": {
+    "target": "1.00Cr",
+    "description": "The investment strategy is to invest across high quality Fixed Income Instruments along with structured diversified portfolio with an aim to generate periodic cash flows and capital growth.",
+    "bullets": [
+      "The popularity of unlisted shares has grown as a result of the competition between new-age companies to reach the necessary threshold for being listed on the stock market. The majority of unlisted stocks are related to start-ups or small businesses. Evidently, small businesses have a smaller basis and hence expand more quickly than well-established businesses.",
+      "In contrast to investing later, investing in a start-up at an early stage will benefit the investor more because it will result in greater profits and ownership holdings. Early investment in a start-up not only promises higher returns but also makes sure the investor provides guidance and decisions to the business."
+    ],
+    "scrips": [
+      {"name": "SBI AMC", "industry": "Financials", "investment_size": "0.50Cr"},
+      {"name": "NSE", "industry": "Financials", "investment_size": "0.50Cr"},
+      {"name": "Tata Capital", "industry": "Financials", "investment_size": "0.50Cr"}
+    ]
+  }
+}
+

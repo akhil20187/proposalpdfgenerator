@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ report_title|default("Investment Report") }}</title>
+    <style>
+        /* Default page style - no footer */
+@page {
+    margin: 0;
+    @bottom-left { content: none; }
+    @bottom-right { content: none; }
+}
+
+/* Style for pages with footer */
+@page with-footer {
+    margin: 1cm;
+    @bottom-left {
+        content: "Research powered by Invest4Edu Pvt Ltd.";
+        color: #fff;
+        font-size: 13px;
+        background: #0a3366;
+        padding-left: 30px;
+        height: 32px;
+        width: 70%;
+        display: block;
+        vertical-align: middle;
+    }
+    @bottom-right {
+        content: "Page No. " counter(page);
+        color: #fff;
+        font-size: 15px;
+        background: #0a3366;
+        padding-right: 30px;
+        height: 32px;
+        width: 30%;
+        display: block;
+        vertical-align: middle;
+    }
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: #333;
+            text-align: right;
+        }
+
+        .section-title {
+            background-color: #0099ff;
+            color: white;
+            padding: 10px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .target-box {
+            background-color: #e6f3ff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .fund-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .fund-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .fund-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0099ff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: normal;
+        }
+
+        .returns-column {
+            text-align: center;
+        }
+
+        .asset-allocation-bar {
+            height: 30px;
+            background-color: #f2f2f2;
+            margin: 20px 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .equity-bar {
+            height: 100%;
+            background-color: #003366;
+            float: left;
+        }
+
+        .debt-bar {
+            height: 100%;
+            background-color: #0099ff;
+            float: left;
+        }
+
+        .legend {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+        }
+
+        .equity-color {
+            background-color: #003366;
+        }
+
+        .debt-color {
+            background-color: #0099ff;
+        }
+
+        .asset-tag {
+            background-color: #e6f3ff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .total-row {
+            background-color: #0099ff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .footer {
+            font-size: 10px;
+            color: #666;
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page (Static Image) -->
+    <div class="cover-page" style="height: 100vh; page-break-after: always; position: relative; margin: 0; padding: 0;">
+        <img src="{{ 'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/static_images/Cover Page.png' }}" style="width: 100vw; height: 100vh; object-fit: cover; display: block; margin: 0; padding: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" alt="Cover Page">
+    </div>
+
+    <!-- Introduction Page -->
+    <div class="introduction-page" style="position: relative; page: with-footer; counter-reset: page 1;">
+        <div class="header">
+            <div style="margin-left: auto;">
+                <img src="{{ 'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png' }}" class="logo" alt="Invest4Edu Logo">
+            </div>
+        </div>
+        
+        <div style="position: relative; margin-top: 40px; padding: 0 20px;">
+            <p style="margin-bottom: 20px; font-weight: 700; font-size: 18px;">Dear {{ clientname }} Sir,</p>
+            
+            <p style="margin-bottom: 20px; font-weight: 700; font-size: 16px;">
+                Greetings from <span style="color: #032b5b;">invest4Edu</span>
+            </p>
+            
+            <p style="margin-bottom: 20px; line-height: 1.5; color: #494949;">
+                At the outset, we would like to thank you for giving us an opportunity to present our business proposition to you. Further to our discussion with you, I am attaching herewith a detailed investment proposal for your reference. Also sharing below a brief about INVEST VALUE, Our Parentage and Our Offerings.
+            </p>
+            
+            <p style="font-weight: 700; font-size: 14px; color: #032b5b; margin-bottom: 10px; margin-top: 20px;">
+                About Invest4Edu
+            </p>
+            
+            <p style="margin-bottom: 20px; line-height: 1.5; color: #494949;">
+                Founded with the vision to transform intellect, experience and technology into services and products for the Financial services Industry using the digital wave. We are the first certified Fintech platform in India to provide solution to all your business needs that you'll ever need to transform your effort and determination into a roaring success in terms of wealth creation, client happiness and business growth. All our offerings are based on the idea of honesty and simplicity.
+            </p>
+            
+            <p style="margin-bottom: 20px; line-height: 1.5; color: #494949;">
+                We are an information technology outsourcing company. The business world is adapting to the fast-changing technological environment and we are committed to build and offer newgen comprehensive portfolio to accelerate your growth and provide sustainability to navigate through a competitive business framework. Our product and service offerings are built to harness technology and analytics.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Static Image Page 2 -->
+    <div class="static-image-page" style="height: 100vh; page-break-before: always; position: relative; margin: 0; padding: 0;">
+        <img src="{{ 'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/static_images/2.png' }}" style="width: 100vw; height: 100vh; object-fit: cover; display: block; margin: 0; padding: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" alt="Static Image 2">
+    </div>
+
+    <!-- Asset Allocation Section -->
+{% if asset_allocation is defined and asset_allocation %}
+<div class="section" style="page: with-footer;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="{{ 'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png' }}" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div class="section-title">Asset Allocation</div>
+        
+        {% if asset_allocation.description is defined %}
+        <p>{{ asset_allocation.description }}</p>
+        {% endif %}
+        
+        {% if asset_allocation.benefits is defined and asset_allocation.benefits %}
+        <img src="{{'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/flowchart_asset.png' }}" style="width: 100%; height: auto;" alt="Asset Allocation Process Flowchart">
+        {% endif %}
+        
+        {% if asset_allocation.distribution is defined and asset_allocation.distribution %}
+        <h3>Asset Allocation</h3>
+        
+        <div class="asset-allocation-bar">
+            <div class="equity-bar" style="width: {{ asset_allocation.distribution.equity }}%;"></div>
+            <div class="debt-bar" style="width: {{ asset_allocation.distribution.debt }}%;"></div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color equity-color"></div>
+                <div>Equity: {{ asset_allocation.distribution.equity }}%</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color debt-color"></div>
+                <div>Debt: {{ asset_allocation.distribution.debt }}%</div>
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if asset_allocation.items is defined and asset_allocation.items %}
+        <table>
+            <thead>
+                <tr>
+                    <th>S. No.</th>
+                    <th>Asset Allocation</th>
+                    <th>Assets Class</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in asset_allocation["items"] %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>
+                        {{ item.name }}
+                        {% if item.details is defined and item.details %}
+                        <ul>
+                            {% for detail in item.details %}
+                            <li>{{ detail }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </td>
+                    <td><div class="asset-tag">{{ item.asset_class }}</div></td>
+                    <td>{{ item.amount }}</td>
+                </tr>
+                {% endfor %}
+                {% if asset_allocation.total is defined %}
+                <tr class="total-row">
+                    <td colspan="3">Total</td>
+                    <td>{{ asset_allocation.total }}</td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
+
+    <!-- Mutual Funds Section (Page 2) -->
+{% if investment_products is defined and investment_products %}
+<div class="section" style="page-break-before: always; page: with-footer;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="{{ 'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png' }}" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div class="section-title">Investment Products</div>
+        {% if investment_products.mutual_fund is defined and investment_products.mutual_fund %}
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <span style="font-weight: 600; font-size: 1.4em;">1. Mutual Fund</span>
+            {% if investment_products.target is defined and investment_products.target %}
+            <span style="background: #eaf4fb; color: #002b5c; font-weight: bold; padding: 4px 16px; border-radius: 4px; font-size: 1.15em;">
+                Target: {{ investment_products.target }}
+            </span>
+            {% endif %}
+        </div>
+        {% if investment_products.mutual_fund.points is defined and investment_products.mutual_fund.points %}
+        <ul class="fund-list">
+            {% for point in investment_products.mutual_fund.points %}
+            <li>{{ point }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% if investment_products.mutual_fund.top_funds is defined and investment_products.mutual_fund.top_funds %}
+        <h3>Top Performing Mutual Funds</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fund Name</th>
+                    <th>Category</th>
+                    <th class="returns-column">1 Year</th>
+                    <th class="returns-column">3 Years</th>
+                    <th class="returns-column">5 Years</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fund in investment_products.mutual_fund.top_funds %}
+                <tr>
+                    <td>{{ fund.name }}</td>
+                    <td>{{ fund.category }}</td>
+                    <td class="returns-column">{{ fund.returns.one_year }}%</td>
+                    <td class="returns-column">{{ fund.returns.three_years }}%</td>
+                    <td class="returns-column">{{ fund.returns.five_years }}%</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
+    <!-- PMS Section (Page 8) -->
+{% if pms is defined and pms %}
+<div class="section" style="page-break-before: always; page: with-footer;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="{{ 'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png' }}" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <span style="font-weight: 600; font-size: 1.4em;">2. Portfolio Management Service (PMS)</span>
+            <span style="background: #eaf4fb; color: #002b5c; font-weight: bold; padding: 4px 16px; border-radius: 4px; font-size: 1.15em;">
+                Target: {{ pms.target }}
+            </span>
+        </div>
+        <p>{{ pms.description }}</p>
+        <ul>
+            {% for point in pms.bullets %}
+            <li>{{ point }}</li>
+            {% endfor %}
+        </ul>
+        <h4>PMS Funds</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fund Name</th>
+                    <th>Category</th>
+                    <th>Investment Size (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fund in pms.funds %}
+                <tr>
+                    <td>{{ fund.fund_name }}</td>
+                    <td>{{ fund.category }}</td>
+                    <td>{{ fund.investment_size }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+    <!-- Fixed Income Offering Section (Page 7) -->
+{% if fixed_income_offering is defined and fixed_income_offering %}
+<div class="section" style="page-break-before: always; page: with-footer;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="{{ 'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png' }}" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <span style="font-weight: 600; font-size: 1.4em;">3. Fixed Income Offering</span>
+            <span style="background: #eaf4fb; color: #002b5c; font-weight: bold; padding: 4px 16px; border-radius: 4px; font-size: 1.15em;">
+                Target: {{ fixed_income_offering.target }}
+            </span>
+        </div>
+        <p>{{ fixed_income_offering.description }}</p>
+        <ul>
+            {% for point in fixed_income_offering.bullets %}
+            <li>{{ point }}</li>
+            {% endfor %}
+        </ul>
+        <h4>List of Debt Papers</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fund Name</th>
+                    <th>Maturity</th>
+                    <th>Payment Frequency</th>
+                    <th>YTM</th>
+                    <th>Quantum</th>
+                    <th>Type</th>
+                    <th>Face Value</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for paper in fixed_income_offering.debt_papers %}
+                <tr>
+                    <td>{{ paper.fund_name }}</td>
+                    <td>{{ paper.maturity }}</td>
+                    <td>{{ paper.payment_frequency }}</td>
+                    <td>{{ paper.ytm }}</td>
+                    <td>{{ paper.quantum }}</td>
+                    <td>{{ paper.type }}</td>
+                    <td>{{ paper.face_value }}</td>
+                    <td>{{ paper.rating }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+    <!-- Private Equity Section (Page 9) -->
+{% if private_equity is defined and private_equity %}
+<div class="section" style="page-break-before: always; page: with-footer;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="{{ 'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png' }}" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <span style="font-weight: 600; font-size: 1.4em;">4. Private Equity</span>
+            <span style="background: #eaf4fb; color: #002b5c; font-weight: bold; padding: 4px 16px; border-radius: 4px; font-size: 1.15em;">
+                Target: {{ private_equity.target }}
+            </span>
+        </div>
+        <p>{{ private_equity.description }}</p>
+        <ul>
+            {% for point in private_equity.bullets %}
+            <li>{{ point }}</li>
+            {% endfor %}
+        </ul>
+        <h4>Top Performing Unlisted Scrips</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Unlisted Scrip Name</th>
+                    <th>Industry</th>
+                    <th>Investment Size (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for scrip in private_equity.scrips %}
+                <tr>
+                    <td>{{ scrip.name }}</td>
+                    <td>{{ scrip.industry }}</td>
+                    <td>{{ scrip.investment_size }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+
+<!-- Static Image Page 11 -->
+<div class="static-image-page" style="height: 100vh; page-break-after: always; position: relative; margin: 0; padding: 0;">
+    <img src="{{ 'file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/static_images/11.png' }}" style="width: 100vw; height: 100vh; object-fit: cover; display: block; margin: 0; padding: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" alt="Static Image 11">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* Invest4Edu PDF Report Styles */
+@page {
+    margin: 1cm;
+    @bottom-right {
+        content: "Page No. " counter(page);
+        font-size: 10pt;
+        color: #333;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.logo {
+    height: 40px;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #333;
+    text-align: right;
+}
+
+.section-title {
+    background-color: #0099ff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.target-box {
+    background-color: #e6f3ff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.fund-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.fund-list li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.fund-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0099ff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: normal;
+}
+
+.returns-column {
+    text-align: center;
+}
+
+.asset-allocation-bar {
+    height: 30px;
+    background-color: #f2f2f2;
+    margin: 20px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.equity-bar {
+    height: 100%;
+    background-color: #003366;
+    float: left;
+}
+
+.debt-bar {
+    height: 100%;
+    background-color: #0099ff;
+    float: left;
+}
+
+.legend {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.equity-color {
+    background-color: #003366;
+}
+
+.debt-color {
+    background-color: #0099ff;
+}
+
+.asset-tag {
+    background-color: #e6f3ff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.total-row {
+    background-color: #0099ff;
+    color: white;
+    font-weight: bold;
+}
+
+.footer {
+    font-size: 10px;
+    color: #666;
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}

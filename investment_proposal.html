@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Invest4Edu Investment Report</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=DM+Sans:700,400");
+        @page {
+    margin: 1cm;
+    @bottom-left {
+        content: "Research powered by Invest4Edu Pvt Ltd.";
+        color: #fff;
+        font-size: 13px;
+        background: #0a3366;
+        padding-left: 30px;
+        height: 32px;
+        width: 70%;
+        display: block;
+        vertical-align: middle;
+    }
+    @bottom-right {
+        content: "Page No. " counter(page);
+        color: #fff;
+        font-size: 15px;
+        background: #0a3366;
+        padding-right: 30px;
+        height: 32px;
+        width: 30%;
+        display: block;
+        vertical-align: middle;
+    }
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: #333;
+            text-align: right;
+        }
+
+        .section-title {
+            background-color: #0099ff;
+            color: white;
+            padding: 10px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .target-box {
+            background-color: #e6f3ff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .fund-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .fund-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .fund-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0099ff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: normal;
+        }
+
+        .returns-column {
+            text-align: center;
+        }
+
+        .asset-allocation-bar {
+            height: 30px;
+            background-color: #f2f2f2;
+            margin: 20px 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .equity-bar {
+            height: 100%;
+            background-color: #003366;
+            float: left;
+        }
+
+        .debt-bar {
+            height: 100%;
+            background-color: #0099ff;
+            float: left;
+        }
+
+        .legend {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+        }
+
+        .equity-color {
+            background-color: #003366;
+        }
+
+        .debt-color {
+            background-color: #0099ff;
+        }
+
+        .asset-tag {
+            background-color: #e6f3ff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .total-row {
+            background-color: #0099ff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .footer {
+            font-size: 10px;
+            color: #666;
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cover Page -->
+    <div class="cover-page" style="background-color: #032b5b; display: flex; flex-direction: row; justify-content: center; width: 100%; page-break-after: always;">
+      <div style="background-color: #032b5b; overflow: hidden; width: 595px; height: 842px;">
+        <div style="position: relative; width: 616px; height: 842px;">
+          <img style="position: absolute; width: 595px; height: 842px; top: 0; left: 0; object-fit: cover;" src="https://c.animaapp.com/Eu3DvZ57/img/6379114-1.png" />
+          <img style="position: absolute; width: 467px; height: 413px; top: 0; left: 0; object-fit: cover;" src="https://c.animaapp.com/Eu3DvZ57/img/image-1.png" />
+          <div style="position: absolute; width: 311px; height: 38px; top: 713px; left: 305px;">
+            <div style="position: relative; width: 309px; height: 38px; background-color: #0ca5ff; border-radius: 5px;">
+              <div style="position: absolute; width: 282px; top: 8px; left: 13px; font-family: 'DM Sans', Helvetica; font-weight: 700; color: #ffffff; font-size: 18px; letter-spacing: 2.70px; line-height: normal;">INVESTMENT PROPOSAL</div>
+            </div>
+          </div>
+          <p style="position: absolute; top: 315px; left: 29px; font-family: 'DM Sans', Helvetica; font-weight: 700; color: #ffffff; font-size: 24px; letter-spacing: 0; line-height: normal;">Building Financial Growth <br />with Trust &amp; Strategy</p>
+          <img style="position: absolute; width: 210px; height: 72px; top: 36px; left: 354px;" src="https://c.animaapp.com/Eu3DvZ57/img/group-1260756219@1.5x.png" />
+          <div style="position: absolute; top: 784px; left: 439px; font-family: 'DM Sans', Helvetica; font-weight: 400; color: #ffffff; font-size: 14px; letter-spacing: 0; line-height: 20px; white-space: nowrap;">www.invest4edu.com</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Introduction Page -->
+    <div style="page-break-after: always;">
+      <div style="position: relative; width: 595px; height: 842px; margin: 0 auto;">
+        <div style="position: absolute; top: 110px; left: 20px; width: 556px; font-family: 'DM Sans', Helvetica; font-weight: 400; color: #494949; font-size: 12px; line-height: 1.5;">
+          <p style="margin-bottom: 20px; font-weight: 700; font-size: 18px;">Dear Sir,</p>
+          
+          <p style="margin-bottom: 20px; font-weight: 700; font-size: 16px;">
+            Greetings from <span style="color: #032b5b;">invest4Edu</span>
+          </p>
+          
+          <p style="margin-bottom: 20px;">
+            At the outset, we would like to thank you for giving us an opportunity to present our business proposition to you. Further to our discussion with you, I am attaching herewith a detailed investment proposal for your reference. Also sharing below a brief about INVEST VALUE, Our Parentage and Our Offerings.
+          </p>
+          
+          <p style="font-weight: 700; font-size: 14px; color: #032b5b; margin-bottom: 10px; margin-top: 20px;">About Invest4Edu</p>
+          
+          <p style="margin-bottom: 20px;">
+            Founded with the vision to transform intellect, experience and technology into services and products for the Financial services Industry using the digital wave. We are the first certified Fintech platform in India to provide solution to all your business needs that you'll ever need to transform your effort and determination into a roaring success in terms of wealth creation, client happiness and business growth. All our offerings are based on the idea of honesty and simplicity.
+          </p>
+          
+          <p style="margin-bottom: 20px;">
+            We are an information technology outsourcing company. The business world is adapting to the fast-changing technological environment and we are committed to build and offer newgen comprehensive portfolio to accelerate your growth and provide sustainability to navigate through a competitive business framework. Our product and service offerings are built to harness technology and analytics.
+          </p>
+        </div>
+        
+        <img style="position: absolute; top: 20px; right: 20px; width: 120px;" src="file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png" />
+        
+        <div style="position: absolute; bottom: 20px; left: 0; right: 0; display: flex; justify-content: space-between; background-color: #032b5b; padding: 8px 20px; color: white;">
+          <div>Research powered by Invest4Edu Pvt Ltd.</div>
+          <div>Page No. 1</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Asset Allocation Section -->
+
+<div class="section" style="page-break-before: always;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div class="section-title">Asset Allocation</div>
+        
+        
+        <p>Asset Allocation is a mix of different asset class eg equity, Debt, Gold etc in an investment portfolio. The aim of asset allocation is to balance risk and return in accordance with different financial goals and risk appetite of the client.</p>
+        
+        
+        
+        <img src="file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/flowchart.png" style="width: 100%; height: auto;" alt="Asset Allocation Process Flowchart">
+        
+        
+        
+        <h3>Asset Allocation</h3>
+        
+        <div class="asset-allocation-bar">
+            <div class="equity-bar" style="width: 70%;"></div>
+            <div class="debt-bar" style="width: 30%;"></div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color equity-color"></div>
+                <div>Equity: 70%</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color debt-color"></div>
+                <div>Debt: 30%</div>
+            </div>
+        </div>
+        
+        
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>S. No.</th>
+                    <th>Asset Allocation</th>
+                    <th>Assets Class</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>1</td>
+                    <td>
+                        Mutual Funds
+                        
+                        <ul>
+                            
+                            <li>Large Cap Fund - 25 Lacs.</li>
+                            
+                            <li>Global Funds - 25 Lacs.</li>
+                            
+                            <li>Hybrid Fund/Multi Asset Fund - 25 Lacs.</li>
+                            
+                            <li>Thematic Fund - 25 Lacs.</li>
+                            
+                        </ul>
+                        
+                    </td>
+                    <td><div class="asset-tag">Equity</div></td>
+                    <td>1.00 Cr.</td>
+                </tr>
+                
+                <tr>
+                    <td>2</td>
+                    <td>
+                        Portfolio Management Service
+                        
+                    </td>
+                    <td><div class="asset-tag">Equity</div></td>
+                    <td>0.50 Cr.</td>
+                </tr>
+                
+                <tr>
+                    <td>3</td>
+                    <td>
+                        Private Equity
+                        
+                    </td>
+                    <td><div class="asset-tag">Equity</div></td>
+                    <td>0.50 Cr.</td>
+                </tr>
+                
+                <tr>
+                    <td>4</td>
+                    <td>
+                        Debt
+                        
+                    </td>
+                    <td><div class="asset-tag">Debt</div></td>
+                    <td>0.50 Cr.</td>
+                </tr>
+                
+                
+                <tr class="total-row">
+                    <td colspan="3">Total</td>
+                    <td>2.50 Cr.</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+    </div>
+</div>
+
+
+
+    <!-- Mutual Funds Section (Page 2) -->
+
+<div class="section" style="page-break-before: always;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div class="section-title">Investment Products</div>
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <span style="font-weight: 600; font-size: 1.4em;">1. Mutual Fund</span>
+            
+            <span style="background: #eaf4fb; color: #002b5c; font-weight: bold; padding: 4px 16px; border-radius: 4px; font-size: 1.15em;">
+                Target: 1.00Cr
+            </span>
+            
+        </div>
+        
+        <ul class="fund-list">
+            
+            <li>Focus on creating a Mutual fund portfolio with objective of long term wealth creation.</li>
+            
+            <li>Selection of fund which are majorly equity oriented and capable of generating Alpha in comparison with the benchmark returns.</li>
+            
+            <li>Investment in funds with a time horizon of 5 - 7years.</li>
+            
+            <li>Selection of portfolio which are managed by Fund Managers with proven track record.</li>
+            
+        </ul>
+        
+        
+        <h3>Top Performing Mutual Funds</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fund Name</th>
+                    <th>Category</th>
+                    <th class="returns-column">1 Year</th>
+                    <th class="returns-column">3 Years</th>
+                    <th class="returns-column">5 Years</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>HDFC Top 100 Fund</td>
+                    <td>LargeCap</td>
+                    <td class="returns-column">8.0%</td>
+                    <td class="returns-column">8.0%</td>
+                    <td class="returns-column">8.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Nippon India Large cap Fund</td>
+                    <td>LargeCap</td>
+                    <td class="returns-column">8.0%</td>
+                    <td class="returns-column">8.0%</td>
+                    <td class="returns-column">8.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>ICICI Bluechip Fund</td>
+                    <td>Large Cap</td>
+                    <td class="returns-column">18.0%</td>
+                    <td class="returns-column">18.0%</td>
+                    <td class="returns-column">18.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Bajaj Finserv large Cap Fund</td>
+                    <td>Large Cap</td>
+                    <td class="returns-column">8.0%</td>
+                    <td class="returns-column">8.0%</td>
+                    <td class="returns-column">8.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Motilal Oswal Nasdaq 100 Fund of Fund</td>
+                    <td>Global Fund</td>
+                    <td class="returns-column">8.0%</td>
+                    <td class="returns-column">8.0%</td>
+                    <td class="returns-column">8.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>ICICI Prudential US Bluechip Equity Fund</td>
+                    <td>Global Fund</td>
+                    <td class="returns-column">18.0%</td>
+                    <td class="returns-column">18.0%</td>
+                    <td class="returns-column">18.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Axis Long Term Equity Fund</td>
+                    <td>LargeCap</td>
+                    <td class="returns-column">12.0%</td>
+                    <td class="returns-column">12.0%</td>
+                    <td class="returns-column">12.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Tata Hybrid Equity Fund</td>
+                    <td>Hybrid</td>
+                    <td class="returns-column">10.0%</td>
+                    <td class="returns-column">10.0%</td>
+                    <td class="returns-column">10.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>DSP BlackRock Top 100 Equity Fund</td>
+                    <td>LargeCap</td>
+                    <td class="returns-column">14.0%</td>
+                    <td class="returns-column">14.0%</td>
+                    <td class="returns-column">14.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Franklin India Prima Fund</td>
+                    <td>LargeCap</td>
+                    <td class="returns-column">16.0%</td>
+                    <td class="returns-column">16.0%</td>
+                    <td class="returns-column">16.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>HDFC Balanced Fund</td>
+                    <td>Balanced</td>
+                    <td class="returns-column">12.0%</td>
+                    <td class="returns-column">12.0%</td>
+                    <td class="returns-column">12.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>ICICI Prudential Long Term Equity Fund</td>
+                    <td>LargeCap</td>
+                    <td class="returns-column">10.0%</td>
+                    <td class="returns-column">10.0%</td>
+                    <td class="returns-column">10.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>SBI Magnum Multiplier Fund</td>
+                    <td>LargeCap</td>
+                    <td class="returns-column">12.0%</td>
+                    <td class="returns-column">12.0%</td>
+                    <td class="returns-column">12.0%</td>
+                </tr>
+                
+                <tr>
+                    <td>Canara Robeco Equity Tax Saver Fund</td>
+                    <td>ELSS</td>
+                    <td class="returns-column">10.0%</td>
+                    <td class="returns-column">10.0%</td>
+                    <td class="returns-column">10.0%</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+        
+    </div>
+</div>
+
+
+    <!-- PMS Section (Page 8) -->
+
+<div class="section" style="page-break-before: always;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <span style="font-weight: 600; font-size: 1.4em;">2. Portfolio Management Service (PMS)</span>
+            <span style="background: #eaf4fb; color: #002b5c; font-weight: bold; padding: 4px 16px; border-radius: 4px; font-size: 1.15em;">
+                Target: 1.00Cr
+            </span>
+        </div>
+        <p>The funds endeavor to generate alpha and risk adjusted returns for the investor by investing in benchmark agnostic multi-cap portfolio with bias towards companies which classify in the mid and small market capitalization.</p>
+        <ul>
+            
+            <li>The Selected Funds invest in companies where valuations are attractive and strong underlying fundamentals form high intrinsic value.</li>
+            
+            <li>The companies selected have a strong economic moat that helps them build a competitive advantage to not just withstand economic headwinds but also to compound their earnings over the long term.</li>
+            
+        </ul>
+        <h4>PMS Funds</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fund Name</th>
+                    <th>Category</th>
+                    <th>Investment Size (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>Seven Island Multi Cap Fund</td>
+                    <td>PMS</td>
+                    <td>0.50Cr</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+    <!-- Fixed Income Offering Section (Page 7) -->
+
+<div class="section" style="page-break-before: always;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <span style="font-weight: 600; font-size: 1.4em;">3. Fixed Income Offering</span>
+            <span style="background: #eaf4fb; color: #002b5c; font-weight: bold; padding: 4px 16px; border-radius: 4px; font-size: 1.15em;">
+                Target: 1.00Cr
+            </span>
+        </div>
+        <p>The investment strategy is to invest across high quality Fixed Income Instruments along with structured diversified portfolio with an aim to generate periodic cash flows and capital growth.</p>
+        <ul>
+            
+            <li>Focus on high credit quality instruments with majority allocation to issuers with high degree of corporate governance</li>
+            
+            <li>Investment strategy is to achieve diversification, targeting periodic cash flows, balancing risk and higher portfolio performance</li>
+            
+            <li>High quality income portfolio with dynamic investment duration to take care of market volatility</li>
+            
+        </ul>
+        <h4>List of Debt Papers</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fund Name</th>
+                    <th>Maturity</th>
+                    <th>Payment Frequency</th>
+                    <th>YTM</th>
+                    <th>Quantum</th>
+                    <th>Type</th>
+                    <th>Face Value</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>10.5% SATIN CREDITCARE NETWORK LIMITED 2027</td>
+                    <td>28 Jan 2027(M)</td>
+                    <td>Monthly</td>
+                    <td>11.00%</td>
+                    <td>10 Lac</td>
+                    <td>Senior Secured</td>
+                    <td>1,00,000</td>
+                    <td>A by ICRA</td>
+                </tr>
+                
+                <tr>
+                    <td>11.1% ESAF SMALL FINANCE BANK LIMITED 2034</td>
+                    <td>28 Jan 2027(M)</td>
+                    <td>Monthly</td>
+                    <td>11.00%</td>
+                    <td>10 Lac</td>
+                    <td>Senior Secured</td>
+                    <td>1,00,000</td>
+                    <td>A by ICRA</td>
+                </tr>
+                
+                <tr>
+                    <td>8.40% HDB FINANCIAL SERVICES LIMITED 2033</td>
+                    <td>28 Jan 2027(M)</td>
+                    <td>Monthly</td>
+                    <td>11.00%</td>
+                    <td>10 Lac</td>
+                    <td>Senior Secured</td>
+                    <td>1,00,000</td>
+                    <td>A by ICRA</td>
+                </tr>
+                
+                <tr>
+                    <td>8.50% CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED 2034</td>
+                    <td>28 Jan 2027(M)</td>
+                    <td>Monthly</td>
+                    <td>11.00%</td>
+                    <td>10 Lac</td>
+                    <td>Senior Secured</td>
+                    <td>1,00,000</td>
+                    <td>A by ICRA</td>
+                </tr>
+                
+                <tr>
+                    <td>9.49% KERALA INFRASTRUCTURE INVESTMENT FUND BOARD 2034</td>
+                    <td>28 Jan 2027(M)</td>
+                    <td>Monthly</td>
+                    <td>11.00%</td>
+                    <td>10 Lac</td>
+                    <td>Senior Secured</td>
+                    <td>1,00,000</td>
+                    <td>A by ICRA</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+    <!-- Private Equity Section (Page 9) -->
+
+<div class="section" style="page-break-before: always;">
+    <div class="header">
+        <div style="margin-left: auto;">
+            <img src="file:///C:/Users/princ/OneDrive/Desktop/invest4du/investment proposal/pdfmaker2/logo.png" class="logo" alt="Invest4Edu Logo">
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+            <span style="font-weight: 600; font-size: 1.4em;">4. Private Equity</span>
+            <span style="background: #eaf4fb; color: #002b5c; font-weight: bold; padding: 4px 16px; border-radius: 4px; font-size: 1.15em;">
+                Target: 1.00Cr
+            </span>
+        </div>
+        <p>The investment strategy is to invest across high quality Fixed Income Instruments along with structured diversified portfolio with an aim to generate periodic cash flows and capital growth.</p>
+        <ul>
+            
+            <li>The popularity of unlisted shares has grown as a result of the competition between new-age companies to reach the necessary threshold for being listed on the stock market. The majority of unlisted stocks are related to start-ups or small businesses. Evidently, small businesses have a smaller basis and hence expand more quickly than well-established businesses.</li>
+            
+            <li>In contrast to investing later, investing in a start-up at an early stage will benefit the investor more because it will result in greater profits and ownership holdings. Early investment in a start-up not only promises higher returns but also makes sure the investor provides guidance and decisions to the business.</li>
+            
+        </ul>
+        <h4>Top Performing Unlisted Scrips</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Unlisted Scrip Name</th>
+                    <th>Industry</th>
+                    <th>Investment Size (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>SBI AMC</td>
+                    <td>Financials</td>
+                    <td>0.50Cr</td>
+                </tr>
+                
+                <tr>
+                    <td>NSE</td>
+                    <td>Financials</td>
+                    <td>0.50Cr</td>
+                </tr>
+                
+                <tr>
+                    <td>Tata Capital</td>
+                    <td>Financials</td>
+                    <td>0.50Cr</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
