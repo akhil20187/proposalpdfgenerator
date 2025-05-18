@@ -16,126 +16,126 @@
           "name": "HDFC Top 100 Fund",
           "category": "LargeCap",
           "returns": {
-            "one_year": 8.00,
-            "three_years": 8.00,
-            "five_years": 8.00
+            "one_year": 8.0,
+            "three_years": 8.0,
+            "five_years": 8.0
           }
         },
         {
           "name": "Nippon India Large cap Fund",
           "category": "LargeCap",
           "returns": {
-            "one_year": 8.00,
-            "three_years": 8.00,
-            "five_years": 8.00
+            "one_year": 8.0,
+            "three_years": 8.0,
+            "five_years": 8.0
           }
         },
         {
           "name": "ICICI Bluechip Fund",
           "category": "Large Cap",
           "returns": {
-            "one_year": 18.00,
-            "three_years": 18.00,
-            "five_years": 18.00
+            "one_year": 18.0,
+            "three_years": 18.0,
+            "five_years": 18.0
           }
         },
         {
           "name": "Bajaj Finserv large Cap Fund",
           "category": "Large Cap",
           "returns": {
-            "one_year": 8.00,
-            "three_years": 8.00,
-            "five_years": 8.00
+            "one_year": 8.0,
+            "three_years": 8.0,
+            "five_years": 8.0
           }
         },
         {
           "name": "Motilal Oswal Nasdaq 100 Fund of Fund",
           "category": "Global Fund",
           "returns": {
-            "one_year": 8.00,
-            "three_years": 8.00,
-            "five_years": 8.00
+            "one_year": 8.0,
+            "three_years": 8.0,
+            "five_years": 8.0
           }
         },
         {
           "name": "ICICI Prudential US Bluechip Equity Fund",
           "category": "Global Fund",
           "returns": {
-            "one_year": 18.00,
-            "three_years": 18.00,
-            "five_years": 18.00
+            "one_year": 18.0,
+            "three_years": 18.0,
+            "five_years": 18.0
           }
         },
         {
           "name": "Axis Long Term Equity Fund",
           "category": "LargeCap",
           "returns": {
-            "one_year": 12.00,
-            "three_years": 12.00,
-            "five_years": 12.00
+            "one_year": 12.0,
+            "three_years": 12.0,
+            "five_years": 12.0
           }
         },
         {
           "name": "Tata Hybrid Equity Fund",
           "category": "Hybrid",
           "returns": {
-            "one_year": 10.00,
-            "three_years": 10.00,
-            "five_years": 10.00
+            "one_year": 10.0,
+            "three_years": 10.0,
+            "five_years": 10.0
           }
         },
         {
           "name": "DSP BlackRock Top 100 Equity Fund",
           "category": "LargeCap",
           "returns": {
-            "one_year": 14.00,
-            "three_years": 14.00,
-            "five_years": 14.00
+            "one_year": 14.0,
+            "three_years": 14.0,
+            "five_years": 14.0
           }
         },
         {
           "name": "Franklin India Prima Fund",
           "category": "LargeCap",
           "returns": {
-            "one_year": 16.00,
-            "three_years": 16.00,
-            "five_years": 16.00
+            "one_year": 16.0,
+            "three_years": 16.0,
+            "five_years": 16.0
           }
         },
         {
           "name": "HDFC Balanced Fund",
           "category": "Balanced",
           "returns": {
-            "one_year": 12.00,
-            "three_years": 12.00,
-            "five_years": 12.00
+            "one_year": 12.0,
+            "three_years": 12.0,
+            "five_years": 12.0
           }
         },
         {
           "name": "ICICI Prudential Long Term Equity Fund",
           "category": "LargeCap",
           "returns": {
-            "one_year": 10.00,
-            "three_years": 10.00,
-            "five_years": 10.00
+            "one_year": 10.0,
+            "three_years": 10.0,
+            "five_years": 10.0
           }
         },
         {
           "name": "SBI Magnum Multiplier Fund",
           "category": "LargeCap",
           "returns": {
-            "one_year": 12.00,
-            "three_years": 12.00,
-            "five_years": 12.00
+            "one_year": 12.0,
+            "three_years": 12.0,
+            "five_years": 12.0
           }
         },
         {
           "name": "Canara Robeco Equity Tax Saver Fund",
           "category": "ELSS",
           "returns": {
-            "one_year": 10.00,
-            "three_years": 10.00,
-            "five_years": 10.00
+            "one_year": 10.0,
+            "three_years": 10.0,
+            "five_years": 10.0
           }
         }
       ]
@@ -183,8 +183,7 @@
       }
     ],
     "total": "2.50 Cr."
-  }
-,
+  },
   "fixed_income_offering": {
     "target": "1.00Cr",
     "description": "The investment strategy is to invest across high quality Fixed Income Instruments along with structured diversified portfolio with an aim to generate periodic cash flows and capital growth.",
@@ -194,11 +193,56 @@
       "High quality income portfolio with dynamic investment duration to take care of market volatility"
     ],
     "debt_papers": [
-      {"fund_name": "10.5% SATIN CREDITCARE NETWORK LIMITED 2027", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"},
-      {"fund_name": "11.1% ESAF SMALL FINANCE BANK LIMITED 2034", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"},
-      {"fund_name": "8.40% HDB FINANCIAL SERVICES LIMITED 2033", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"},
-      {"fund_name": "8.50% CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED 2034", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"},
-      {"fund_name": "9.49% KERALA INFRASTRUCTURE INVESTMENT FUND BOARD 2034", "maturity": "28 Jan 2027(M)", "payment_frequency": "Monthly", "ytm": "11.00%", "quantum": "10 Lac", "type": "Senior Secured", "face_value": "1,00,000", "rating": "A by ICRA"}
+      {
+        "fund_name": "10.5% SATIN CREDITCARE NETWORK LIMITED 2027",
+        "maturity": "28 Jan 2027(M)",
+        "payment_frequency": "Monthly",
+        "ytm": "11.00%",
+        "quantum": "10 Lac",
+        "type": "Senior Secured",
+        "face_value": "1,00,000",
+        "rating": "A by ICRA"
+      },
+      {
+        "fund_name": "11.1% ESAF SMALL FINANCE BANK LIMITED 2034",
+        "maturity": "28 Jan 2027(M)",
+        "payment_frequency": "Monthly",
+        "ytm": "11.00%",
+        "quantum": "10 Lac",
+        "type": "Senior Secured",
+        "face_value": "1,00,000",
+        "rating": "A by ICRA"
+      },
+      {
+        "fund_name": "8.40% HDB FINANCIAL SERVICES LIMITED 2033",
+        "maturity": "28 Jan 2027(M)",
+        "payment_frequency": "Monthly",
+        "ytm": "11.00%",
+        "quantum": "10 Lac",
+        "type": "Senior Secured",
+        "face_value": "1,00,000",
+        "rating": "A by ICRA"
+      },
+      {
+        "fund_name": "8.50% CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED 2034",
+        "maturity": "28 Jan 2027(M)",
+        "payment_frequency": "Monthly",
+        "ytm": "11.00%",
+        "quantum": "10 Lac",
+        "type": "Senior Secured",
+        "face_value": "1,00,000",
+        "rating": "A by ICRA"
+      },
+      {
+        "fund_name": "9.49% KERALA INFRASTRUCTURE INVESTMENT FUND BOARD 2034",
+        "maturity": "28 Jan 2027(M)",
+        "payment_frequency": "Monthly",
+        "ytm": "11.00%",
+        "quantum": "10 Lac",
+        "type": "Senior Secured",
+        "face_value": "1,00,000",
+        "rating": "A by ICRA"
+      }
     ]
   },
   "pms": {
@@ -209,7 +253,11 @@
       "The companies selected have a strong economic moat that helps them build a competitive advantage to not just withstand economic headwinds but also to compound their earnings over the long term."
     ],
     "funds": [
-      {"fund_name": "Seven Island Multi Cap Fund", "category": "PMS", "investment_size": "0.50Cr"}
+      {
+        "fund_name": "Seven Island Multi Cap Fund",
+        "category": "PMS",
+        "investment_size": "0.50Cr"
+      }
     ]
   },
   "private_equity": {
@@ -220,10 +268,21 @@
       "In contrast to investing later, investing in a start-up at an early stage will benefit the investor more because it will result in greater profits and ownership holdings. Early investment in a start-up not only promises higher returns but also makes sure the investor provides guidance and decisions to the business."
     ],
     "scrips": [
-      {"name": "SBI AMC", "industry": "Financials", "investment_size": "0.50Cr"},
-      {"name": "NSE", "industry": "Financials", "investment_size": "0.50Cr"},
-      {"name": "Tata Capital", "industry": "Financials", "investment_size": "0.50Cr"}
+      {
+        "name": "SBI AMC",
+        "industry": "Financials",
+        "investment_size": "0.50Cr"
+      },
+      {
+        "name": "NSE",
+        "industry": "Financials",
+        "investment_size": "0.50Cr"
+      },
+      {
+        "name": "Tata Capital",
+        "industry": "Financials",
+        "investment_size": "0.50Cr"
+      }
     ]
   }
 }
-

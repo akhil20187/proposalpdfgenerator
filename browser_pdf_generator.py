@@ -136,7 +136,7 @@ def load_json_data(file_path):
 
 
 def generate_pdf_with_playwright(html_path, pdf_path):
-    """Generate a PDF from the HTML file using Playwright."""
+    """Generate a PDF from the HTML file using Playwright (sync version)."""
     try:
         from playwright.sync_api import sync_playwright
         import time
@@ -157,6 +157,39 @@ def generate_pdf_with_playwright(html_path, pdf_path):
                 display_header_footer=False
             )
             browser.close()
+        print(f"PDF generated at: {abs_pdf_path}")
+        return True
+    except ImportError:
+        print("Playwright is not installed. Please run 'pip install playwright' and 'playwright install' to use PDF generation.")
+        return False
+    except Exception as e:
+        print(f"Error generating PDF: {str(e)}")
+        return False
+
+import asyncio
+
+async def generate_pdf_with_playwright_async(html_path, pdf_path):
+    """Generate a PDF from the HTML file using Playwright (async version for FastAPI)."""
+    try:
+        from playwright.async_api import async_playwright
+        import os
+        import asyncio
+        abs_html_path = os.path.abspath(html_path)
+        abs_pdf_path = os.path.abspath(pdf_path)
+        file_url = f"file:///{abs_html_path.replace(os.sep, '/')}"
+        async with async_playwright() as p:
+            browser = await p.chromium.launch()
+            page = await browser.new_page()
+            await page.goto(file_url)
+            await asyncio.sleep(1)  # Wait for page to render (adjust if you have dynamic JS)
+            await page.pdf(
+                path=abs_pdf_path,
+                format="A4",
+                margin={"top": "20mm", "bottom": "20mm", "left": "15mm", "right": "15mm"},
+                print_background=True,
+                display_header_footer=False
+            )
+            await browser.close()
         print(f"PDF generated at: {abs_pdf_path}")
         return True
     except ImportError:

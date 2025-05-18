@@ -1,0 +1,8 @@
+/venv
+/venv/
+/venv/lib/python3.10/site-packages
+/venv/lib/python3.10/site-packages/playwright
+/venv/lib/python3.10/site-packages/playwright/driver/package
+/venv/lib/python3.10/site-packages/playwright/driver/package/browsers.json
+/outputs
+/__pycache__
